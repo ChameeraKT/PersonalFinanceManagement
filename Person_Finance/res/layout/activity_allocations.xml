@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aaaa"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Allocations" >
+
+    <ListView
+        android:id="@+id/listView_allocation"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/editTextAlAmount"
+        android:layout_below="@+id/textView1" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/textViewAlAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/textViewAlCategory"
+        android:layout_alignTop="@+id/editTextAlAmount"
+        android:layout_toLeftOf="@+id/editTextAlAmount"
+        android:text="Amount  :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editTextAlAmount"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_alignRight="@+id/textView_Al_remainingincome"
+        android:layout_below="@+id/spinnerAlCat"
+        android:layout_marginTop="25dp"
+        android:background="#ffebcd"
+        android:ems="10"
+        android:hint="Type amount here"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView_Al_remainingincome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="remain"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/buttonAlAdd"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextAlAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="#ff2400"
+        android:textColor="#ffffff"
+        android:text="Add Allocation" />
+
+    <TextView
+        android:id="@+id/textViewAlCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerAlCat"
+        android:layout_alignLeft="@+id/textViewAlMonth"
+        android:text="Category:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewAlMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinnerAlCat"
+        android:layout_alignLeft="@+id/listView_allocation"
+        android:text="Month    :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinnerAlCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView_Al_remainingincome"
+        android:layout_below="@+id/spn"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@+id/textViewAlAmount" />
+
+    <TextView
+        android:id="@+id/textView_rEMAINIG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_Al_remainingincome"
+        android:layout_alignBottom="@+id/textView_Al_remainingincome"
+        android:layout_toLeftOf="@+id/textView_Al_remainingincome"
+        android:text="Remaining Income :"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignRight="@+id/buttonAlAdd"
+        android:text="Amount"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listView_allocation"
+        android:layout_below="@+id/buttonAlAdd"
+        android:layout_marginTop="17dp"
+        android:text="Month"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listView_allocation"
+        android:layout_toRightOf="@+id/textViewAlCategory"
+        android:text="Category"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spn"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/spinnerAlCat"
+        android:layout_alignRight="@+id/spinnerAlCat"
+        android:layout_below="@+id/textView_Al_remainingincome"
+        android:layout_marginTop="23dp"
+        android:background="#ffebcd" />
+
+</RelativeLayout>
